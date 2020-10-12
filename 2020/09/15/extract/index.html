@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Ginkgo">
+
+
+    <meta name="subtitle" content="Ginkgo">
+
+
+    <meta name="description" content="Personal page of Ginkgo">
+
+
+    <meta name="keywords" content="Ginkgo">
+
+
+<title>摘抄 | Ginkgo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Ginkgo</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Ginkgo</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">摘抄</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Ginkgo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">2020-09-15&nbsp;&nbsp;17:42:25</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%96%87%E8%89%BA%E9%9D%92%E5%B9%B4/">文艺青年</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="夜行观览车"><a href="#夜行观览车" class="headerlink" title="夜行观览车"></a>夜行观览车</h2><p>我的想法是多么幼稚。看到别人的不幸才能意识到的幸福——这真的能叫做幸福吗？……不能叫做幸福。至少期盼过这样的幸福。</p>
+<p>哪怕是常年住惯的地方，转上一圈，再回到地面时，同样的景色或许也会看上去不同吧。</p>
+<h2 id="少女"><a href="#少女" class="headerlink" title="少女"></a>少女</h2><p>我拉起由纪的手，没有任何目的地，一直跑下去，直到感觉死亡已经不在后面追赶我们了。</p>
+<h2 id="毕业"><a href="#毕业" class="headerlink" title="毕业"></a>毕业</h2><p>我觉得日记就是这样一个东西，心里有事不想让别人知道，写的时候却又会设想别人正在看自己的心事。</p>
+<p>回顾那些不经意间度过的时光就像用显微镜放大照片一样，看不见的终究还是看不见。</p>
+<h2 id="被嫌弃的松子的一生"><a href="#被嫌弃的松子的一生" class="headerlink" title="被嫌弃的松子的一生"></a>被嫌弃的松子的一生</h2><p>平安夜我一个人过，在公寓的房间里盖上棉被捂住耳朵。过年也一个人过，我没有吃年糕。情人节也一个人过，我没有买巧克力。觉得天气变暖和时，樱花开了，我没有去赏花。<br>半夜，觉得肚子好饿，我打开冰箱一看，空荡荡的。就如同文字的叙述，冰箱里面什么也没有。我又饿着肚子回到被窝里。</p>
+<p>我刚从店铺所在的那栋大楼走出去，就看到整条街像是庙会的晚上一样热闹。穿着西装的上班族红着脸笑着，身上包裹着流行服饰的年轻女孩，一副自以为是银座的女主角似的表情昂首阔步。<br>为什么他们可以那样笑呢？为什么他们的举手投足能那么有自信呢？到底有什么事可以那么高兴。<br>我看着和自己不太相关的景象，觉得头晕目眩，站了好一会儿。<br>这里或许不是我应该待的地方。对我来说，应该还有其他更适合的地方。一定有，应该有才对……</p>
+
+        </div>
+
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/10/10/dos8dot3/">8dot3 短名称</a>
+            
+            
+            <a class="next" rel="next" href="/2020/09/15/program/">编程相关</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Ginkgo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

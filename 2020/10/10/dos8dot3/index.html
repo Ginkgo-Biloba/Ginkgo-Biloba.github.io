@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Ginkgo">
+
+
+    <meta name="subtitle" content="Ginkgo">
+
+
+    <meta name="description" content="Personal page of Ginkgo">
+
+
+    <meta name="keywords" content="Ginkgo">
+
+
+<title>8dot3 短名称 | Ginkgo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Ginkgo</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Ginkgo</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">8dot3 短名称</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Ginkgo</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">2020-10-10&nbsp;&nbsp;19:18:27</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E8%8B%A6%E9%80%BC%E7%A0%81%E5%86%9C/">苦逼码农</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>今天，不，应该是前几天加班时就遇到了一个问题。</p>
+<p>删文件的时候，本来是想删除素材文件及子文件下面的 <code>raw</code> 文件，用 <code>del /s *.raw</code>，会顺带着把 <code>*.rawMIPI</code> 也删掉了。确认过好几次，没有打错，路径是 <code>C:\CSample\1008\1552829255570\1552829255570_3008x2256_000.RAWMIPI</code><br>这样子，在文件夹 <code>C:\CSample\1008</code> 下面执行的命令。</p>
+<p>今天终于有点空了，在 CppTemplateTutoria 群里面问了一下，大家第一反应是不可能。然后猜测可能跟通配符有关，想着验证一下，就在 G 盘建立了个文件夹，大概如下面：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">G:</span></span><br><span class="line"><span class="function">└─123</span></span><br><span class="line"><span class="function">  ├─<span class="title">A.a</span></span></span><br><span class="line"><span class="function">  └─<span class="title">B.ab</span></span></span><br></pre></td></tr></table></figure>
+
+<p>然后再目录 <code>123</code> 下面执行 <code>del /s *.a</code>，发现并没有问题，<code>B.ab</code> 不会被删。在群里说了一声可能自己哪里弄错了，就没管这个事了。</p>
+<p>下午的时候不小心，又删了一次，发现素材里面的 RAWMIPI 还是会被删，就决定必须想办法了。</p>
+<img src="/2020/10/10/dos8dot3/image-20201010123857134.jpg" class="" title="现象">
+
+<p>显示把素材复制一份到 G 盘，执行类似操作，发现没问题。于是想，难道只有 C 盘才能复现？于是在 C 盘建立上述 G 盘的 123 目录，执行操作，<code>B.ab</code> 还是不会被删。</p>
+<p>这是，想到难不成跟文件后缀有关，遂改名 <code>A.a -&gt; A.raw / B.ab -&gt; B.RAWMIPI</code>，尝试，<code>B.RAWMIPI</code> 仍然没事。</p>
+<p>可能跟文件名有关？于是尝试了下图这样，里面的文件名就跟上图类似。删除，果然 <code>RAWMIPI</code> 一起被删了。</p>
+<img src="/2020/10/10/dos8dot3/image-20201010133857134.jpg" class="" title="文件结构">
+
+<img src="/2020/10/10/dos8dot3/image-20201010143857134.jpg" class="" title="结果">
+
+<p>把相关截图发到群里之后，大神一句话总结原因：DOS 8.3 余孽……</p>
+<h2 id="8-3-短名称"><a href="#8-3-短名称" class="headerlink" title="8.3 短名称"></a>8.3 短名称</h2><p>复制自维基百科：</p>
+<blockquote>
+<p>8.3 文件名是一种文件名规范，它主要运用于 FAT 文件系统中。其后继者 NTFS 文件系统也支持 8.3 文件名。这种规范之所以被称为“8.3”，是因为其文件名的特殊格式：文件名的主体部分最多只能包含 8 个字符，而文件扩展名最多只能包含 3 个字符。二者之间用“.”相连。8.3 文件名的目录和文件名都仅使用大写字母，但 DOS 和命令提示符都不大小写敏感（当然，如果使用 UNIX 或类 Unix 等一般大小写敏感的操作系统，则应注意）。</p>
+<p>8.3 文件名必须包含主体文件名，但不必须包含扩展名，二者之间用“.”相连。但是如果输入“.”后没有输入扩展名，则“.”没有意义，会被忽略。比如<code>12345678.</code>会被系统保存为<code>12345678</code>。</p>
+</blockquote>
+<p>更详细的可以网上搜索，具体就是文件系统的历史遗留问题。具体表现就是一个文件如果文件名太长，那么文件系统会给它另外一个 8+3 样式的名字：文件名 8 个字符 + 扩展名 3 个字符。比如 Windows 7 的时候有时看到的程序文件夹 <code>Progame Files</code> 的别名 <code>PROGRA~1</code> 就是这个东西。</p>
+<img src="/2020/10/10/dos8dot3/image-20201010170108660.png" class="" title="短名称">
+
+<p>以上面为例，<code>.raw</code> 和 <code>.RAWMIPI</code> 对于这样的文件系统来说是同一个后缀（Windows 不区分大小写），所以全都给删了。</p>
+<p>另外，看论坛上说，从 Windows 8 开始，默认只在系统盘启用 8dot3 文件格式，所以这个现象在我的 G 盘并不能复现。</p>
+<p><img src="/dos8dot3/image-20201010153857134.jpg" alt="默认状态"></p>
+<p>可以使用 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/fsutil-8dot3name">fsutil.exe</a> 来修改磁盘卷上 8dot3name 的开启与否。使用参数 <code>query</code> 和 <code>set</code> 分别查询和修改。根据微软的说法，启用的话<a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/help/121007/how-to-disable-8-3-file-name-creation-on-ntfs-partitions">可能会降低目录枚举性能</a>。另外，改了之后可能有些软件在注册表里面存的这种短名路径会出问题，可以先用参数 <code>scan</code> 扫描一下。</p>
+<p>不管了，先禁用再说。</p>
+<img src="/2020/10/10/dos8dot3/image-20201010163857134.png" class="" title="禁用短名称">
+
+<h2 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h2><p>hexo 引用图片真是麻烦啊，要么渲染不出来，要么 Typora 里面显示不出来。看了很多文章，很多推荐 hexo-asset-image 的根本就没用，有些说了原因但是方法也太复杂。最终找到了一个插件 <a target="_blank" rel="noopener" href="https://github.com/cocowool/hexo-image-link">hexo-image-link</a>，终于能用了。这里的能用表示：</p>
+<ol>
+<li><p>可以在 Typora 里面，按照 Markdown 的标准语法，正常插入及显示图片。</p>
+</li>
+<li><p><code>hexo.cmd g</code> 生成网页或者 <code>hexo.cmd s</code> 本地渲染后，网页上也可以正常显示图片。</p>
+</li>
+</ol>
+<p>看代码也就 20 行左右。当然作为一个 JavaScript 小白，我不想去关心插件怎么替换路径的 😅。</p>
+
+        </div>
+
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2020/09/15/extract/">摘抄</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Ginkgo | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
